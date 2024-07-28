@@ -11,8 +11,9 @@ body {
 ul,
 ol {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 h1,
@@ -22,7 +23,8 @@ h4,
 h5,
 h6,
 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 img {
@@ -54,7 +56,8 @@ button {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -251,8 +254,10 @@ button {
   border: none;
   cursor: pointer;
   margin-bottom: 24px;
-
   border: 1px solid #e7e9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-menu-icon {
@@ -261,6 +266,10 @@ button {
 
 .mobile-menu-nav {
   margin-bottom: auto;
+}
+
+.mobile-list-item:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .mobile-list-link {
@@ -448,13 +457,12 @@ button {
   overflow: hidden;
 }
 
-.submain-section-icon {
-  display: none;
+.submain-section {
+  padding: 96px 0;
 }
 
-.submain-section-contaiter {
-  padding-top: 96px;
-  padding-bottom: 96px;
+.submain-section-icon {
+  display: none;
 }
 
 .submain-list {
@@ -487,7 +495,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .submain-list {
-    gap: 24px;
+    column-gap: 24px;
     row-gap: 72px;
   }
 
@@ -497,7 +505,6 @@ button {
 
   .submain-list-text {
     font-weight: 500;
-    margin-bottom: 72px;
   }
 
   .submain-list-item {
@@ -523,8 +530,7 @@ button {
   }
 
   .submain-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
   }
 
   .submain-list-item {
@@ -546,7 +552,7 @@ button {
 
 .team {
   background-color: #f4f4fd;
-  padding: 96px 28px;
+  padding: 96px 0px;
 }
 
 .team-title {
@@ -561,7 +567,7 @@ button {
 
 .team-list {
   display: flex;
-  align-items: center;
+
   justify-content: center;
   flex-wrap: wrap;
   gap: 72px;
@@ -569,7 +575,6 @@ button {
 
 .team-item {
   width: 264px;
-  padding-bottom: 32px;
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -577,8 +582,7 @@ button {
 }
 
 .employee-name {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 0;
 }
 
 .team-subtitle {
@@ -641,8 +645,7 @@ button {
 
 @media screen and (min-width: 1158px) {
   .team {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
   }
 
   .team-list {
